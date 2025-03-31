@@ -14,6 +14,7 @@
     width: 100%;
     display: flex;
     background-color: white;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.116);
     justify-content: space-between;
     align-items: center;
     height: 80px;
@@ -44,15 +45,14 @@
 
 .nav_links ul li a {
     text-decoration: none;
-    color: black;
+    color: #139bcd;
     font-size: 1.5em;
     font-weight: 500;
 }
 
 .nav_links ul li a:hover {
-    color: rgb(99, 98, 98);
-    font-weight: 700;
-    transition: .6s;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.171);
+    transition: .3s ease-in-out;
 }
 
 /* MENU MOBILE */
@@ -77,7 +77,7 @@
         flex-direction: column;
         position: fixed;
         top: 0;
-        right: -100%; /* Escondido inicialmente */
+        right: -100%; 
         width: 250px;
         height: 100vh;
         background-color: white;
@@ -96,8 +96,12 @@
     }
 
     .nav_links.open {
-        right: 0; /* Abre na lateral direita */
+        right: 0;
         opacity: 1;
+    }
+
+    .nav_links ul li a:hover {
+        margin-left: 5px;
     }
 
     .menu_mobile {
