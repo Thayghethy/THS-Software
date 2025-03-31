@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*CABEÇALHO*/
+#close,
+#burger {
+    display: none;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    z-index: 9999;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.nav_links ul {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav_links ul li {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav_links ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.nav_links ul li a:hover {
+    color: rgb(99, 98, 98);
+    font-weight: 700;
+    transition: .6s;
+}
+
+
+@media (max-width: 768px) {
+    .nav_links ul {
+        display: none;
+    }
+    #close {
+        display: none;
+        color: #139bcd;
+        font-size: 3em;
+        cursor: pointer;
+        padding: 0px;
+        position: absolute;
+        top: 5%;
+        right: 3%;
+    }
+    
+    #burger {
+        display: block;
+        color: #139bcd;
+        font-size: 3em;
+        cursor: pointer;
+        padding: 0px;
+        transition: background-color 0.3s, color 0.3s;
+        position: absolute;
+        top: 5%;
+        right: 3%;
+    }
+    
+    #burger:hover,
+    #close:hover {
+        color: #1582b4;
+        text-shadow: 2px 2px rgba(0, 0, 0, 0.274);
+        right: 4%;
+        transition: .3s ease-in-out;
+    }
+
+    .nav_links.open {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    
+}
+
+@media (min-width: 768px){
+    #nav {
+        display: none;
+    }
+}
+
+
+
