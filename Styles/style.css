@@ -118,14 +118,17 @@
     text-align: center;
 }
 
-.sobre h2 {
+.sobre h2,
+.projetos h2,
+.historia p {
     max-width: 800px;
     font-weight: 700;
     font-size: 1.5em;
     padding: 10px;
 }
 
-.boxes-sobre {
+.boxes-sobre,
+.boxes {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -145,12 +148,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px solid #2b8bea;
-    border-radius: 20px;
-    height: 350px;
+    border: 1px solid #2b8bea;
+    border-radius: 12px;
+    height: 250px;
     width: 300px;
     margin-bottom: 20px;
-    box-shadow: 0 0 20px 2px #2b8bea69;
+    box-shadow: 0 0 20px 5px #2b8bea2a;
+    transition: transform 0.3s ease;
 }
 
 .box h3 {
@@ -162,7 +166,106 @@
     margin-top: 10px;
 }
 
+.sobre-empresa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
 
+.historia h3 {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+span {
+    font-style: italic;
+}
+
+/*SERVIÇOS*/
+.section-servicos {
+    padding: 80px 20px;
+    background-color: #2b8bea;
+    text-align: center;
+   }
+   .section-servicos h2 {
+    font-size: 2.5em;
+    color: #ffffff;
+    margin-bottom: 10px;
+   }
+   .section-servicos .descricao {
+    font-size: 1.1em;
+    margin-bottom: 50px;
+    color: #ffffff;
+   }
+   .servicos-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+   }
+   .servico-box {
+    background: white;
+    border: 1px solid #2b8bea;
+    box-shadow: 0 0 20px 5px #2b8bea23;
+    border-radius: 12px;
+    padding: 30px 20px;
+    max-width: 300px;
+    box-shadow: 0 0 20px 5px #2b8bea2a;
+    transition: transform 0.3s ease;
+   }
+   .servico-box:hover,
+   .box:hover {
+    transform: translateY(-5px);
+   }
+   .servico-box i {
+    font-size: 40px;
+    color: #0077cc;
+    margin-bottom: 20px;
+   }
+   .servico-box h3 {
+    font-size: 1.3em;
+    color: #0077cc;
+    margin-bottom: 10px;
+   }
+   .servico-box p {
+    font-size: 1em;
+    color: #444;
+   }
+/*PROJETOS*/
+.projetos {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20;
+}
+
+.portfolio {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20;
+}
+
+.box-projetos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20;
+    width: 250px;
+}
+
+.box-projetos img {
+    max-width: 300px;
+}
 
 
 
