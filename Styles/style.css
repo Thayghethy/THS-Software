@@ -189,6 +189,7 @@ span {
     padding: 80px 20px;
     background-color: #2b8bea;
     text-align: center;
+    box-shadow: 2px 2px 2px 10px rgba(0, 0, 0, 0.185);
    }
    .section-servicos h2 {
     font-size: 2.5em;
@@ -302,6 +303,7 @@ span {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: 2px 2px 2px 10px rgba(0, 0, 0, 0.178);
    }
 
 .orcamento h2 {
@@ -377,6 +379,28 @@ span {
    .contatos p {
     line-height: 5px;
    }
+
+   .insta {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+
+   .insta a {
+    text-decoration: none;
+    color: #0077cc;
+    text-align: center;
+   }
+
+   .insta a:hover {
+    color: #003366;
+   }
+
+   .insta img {
+    width: 50px;
+   }
+   
 /*RODAPÉ*/
  footer {
     background-color: #0077cc;
@@ -385,6 +409,7 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.281);
  }  
 
 
