@@ -140,7 +140,7 @@
         </section>
         <section class="orcamento" id="orcamento">
             <h2>Solicite seu orçamento!</h2>
-            <form action="http://15.228.12.94:3000/aws-endpoint" method="POST">
+            <form id="formulario">
                 <label>Nome:</label>
                 <input type="text" name="nome" required><br>
                 <label>Email:</label>
@@ -150,7 +150,8 @@
                 <label>Observações:</label>
                 <textarea name="observacoes"></textarea><br>
                 <button type="submit">Enviar</button>
-            </form>
+                <p id="mensagem"></p>
+            </form>              
         </section>
         <section class="contatos" id="contatos">
             <h3>THS Software</h3>
@@ -167,5 +168,35 @@
         <p>THS SOFTWARE - 59.821.778/0001-04 - Todos os direitos reservados</p>
     </footer>
     <script src="script.js"></script>
+    <script>
+        document.getElementById("formulario").addEventListener("submit", async function(e) {
+          e.preventDefault();
+        
+          const form = e.target;
+          const dados = {
+            nome: form.nome.value,
+            email: form.email.value,
+            whatsapp: form.whatsapp.value,
+            observacoes: form.observacoes.value
+          };
+        
+          const resposta = await fetch("http://15.228.12.94:3000/", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(dados)
+          });
+        
+          const mensagem = document.getElementById("mensagem");
+          if (resposta.ok) {
+            mensagem.textContent = "Formulário enviado com sucesso!";
+            mensagem.style.color = "green";
+            form.reset();
+          } else {
+            mensagem.textContent = "Erro ao enviar o formulário. Tente novamente.";
+            mensagem.style.color = "red";
+          }
+        });
+        </script>
+        
 </body>
 </html>
